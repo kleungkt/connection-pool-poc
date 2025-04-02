@@ -18,12 +18,12 @@ import java.util.concurrent.atomic.AtomicReference;
 
 public class MongoDBClusterMonitor {
     // Configuration placeholders (should be injected via environment variables or other config methods)
-    private static final String GROUP_ID = System.getenv("MONGO_GROUP_ID"); // e.g., "66bb67cb098fbb47d361d5db"
-    private static final String CLUSTER_NAME = System.getenv("MONGO_CLUSTER_NAME"); // e.g., "ClusterTest"
-    private static final String API_PUBLIC_KEY = System.getenv("MONGO_API_PUBLIC_KEY"); // e.g., "dsyofaba"
-    private static final String API_PRIVATE_KEY = System.getenv("MONGO_API_PRIVATE_KEY"); // e.g., "f73ddd92-34d9-452f-8fd5-4e33cea073c0"
-    private static final String PROCESS_ID = System.getenv("MONGO_PROCESS_ID"); // e.g., "clustertest-shard-00-00.4y4hg.mongodb.net:27017"
-    private static final String MONGO_URI = System.getenv("MONGO_URI"); // e.g., "mongodb+srv://new-user-01:new-user-01@clustertest.4y4hg.mongodb.net/"
+    private static final String GROUP_ID = System.getenv("MONGO_GROUP_ID"); 
+    private static final String CLUSTER_NAME = System.getenv("MONGO_CLUSTER_NAME"); 
+    private static final String API_PUBLIC_KEY = System.getenv("MONGO_API_PUBLIC_KEY"); 
+    private static final String API_PRIVATE_KEY = System.getenv("MONGO_API_PRIVATE_KEY"); 
+    private static final String PROCESS_ID = System.getenv("MONGO_PROCESS_ID");
+    private static final String MONGO_URI = System.getenv("MONGO_URI"); 
 
     private static final String MEASUREMENTS_URL = "https://cloud.mongodb.com/api/atlas/v1.0/groups/" + GROUP_ID + "/processes/" + PROCESS_ID + "/measurements";
     private static final String CONFIG_URL = "https://cloud.mongodb.com/api/atlas/v1.0/groups/" + GROUP_ID + "/clusters/" + CLUSTER_NAME;
